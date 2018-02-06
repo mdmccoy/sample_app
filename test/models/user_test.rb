@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+require 'test_helper'
+
+class UserTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+  def setup
+    @user = User.new(name: 'Example User', email: 'example@user.com')
+  end
+
+  test 'should be valid' do
+    assert @user.valid?
+  end
+
+  test 'name is present' do
+    @user.name = '    '
+    assert_not @user.valid?
+  end
+
+  test 'email is present' do
+    @user.email = '   '
+    assert_not @user.valid?
+  end
+
+  test 'name should not be too long' do
+    @user.name = 'a' * 51
+    assert_not @user.valid?
+  end
+
+  test 'email should not be too long' do
+    @user.email = 'a' * 244 + '@example.com'
+    assert_not @user.valid?
+  end
+end
+=======
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
@@ -73,3 +109,4 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 end
+>>>>>>> 81b2ff3fb54c27134e66bbd64c9a3553bb0423f4
