@@ -1,5 +1,7 @@
 # README
 
+Currently hosted on [Heroku](https://murmuring-cliffs-34514.herokuapp.com/)
+
 # Ruby on Rails Tutorial sample application
 
 This is the sample application for
